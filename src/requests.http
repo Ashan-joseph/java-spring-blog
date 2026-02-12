@@ -1,0 +1,75 @@
+###
+POST http://localhost:8080/api/oauth/token
+Content-Type: application/json
+
+{
+    "clientId" : "1",
+    "secret" : "Ashan@123"
+}
+
+###
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcwNzk4NDY1LCJleHAiOjE3NzA4MjcyNjV9.A6laptYpy1tciPCPv_kKtQMtgNin_n0AJYfM8O1HOC8
+
+{
+  "name": "Naveen12",
+  "email": "naveen11@gmail.com",
+  "password": "Naveen@123"
+}
+
+###
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcwMjY5NTUzLCJleHAiOjE3NzAyOTgzNTN9.LWvdv_zBRWDEOSaYMtkfI94r2jGVVGIN7n4y9X_xH0c
+
+{
+  "email": "joe@gmail.com",
+  "password": "Joseph@123"
+}
+
+###
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+
+{
+  "title": "Importance of GO Lang",
+  "description": "Explains about go lang and reason to learn it.",
+  "userId" : 1
+}
+
+###
+GET http://localhost:8080/api/posts/all-posts
+Content-Type: application/json
+
+###
+GET http://localhost:8080/api/posts/show/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcwMzAwMzQyLCJleHAiOjE3NzAzMjkxNDJ9.5Qn2Khf1VIL3JhyQls1XEi3qTXO5KnWwLhdidFdm9cY
+
+###
+POST http://localhost:8080/api/comments
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "postId": 3,
+  "comment" : "Post is clear and helpful"
+}
+
+###
+POST http://localhost:8080/api/comments/change-visibility
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcwMzAwMzQyLCJleHAiOjE3NzAzMjkxNDJ9.5Qn2Khf1VIL3JhyQls1XEi3qTXO5KnWwLhdidFdm9cY
+
+{
+  "commentId": 6,
+  "userId": 2,
+  "commentStatus": "HIDE"
+
+}
+
+###
+GET http://localhost:8080/api/comments/user/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcwNzMyOTc1LCJleHAiOjE3NzA3NjE3NzV9.-B5_iM4FarYZO6hEDdL7NkrXixxXbN4YGZWWGVZEgQ0
