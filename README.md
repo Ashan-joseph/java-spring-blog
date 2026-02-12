@@ -1,39 +1,47 @@
-Spring Boot Blog Application
+📝 Spring Boot Blog API
 
-A simple RESTful API built using Spring Boot.
+A simple RESTful backend application built using Spring Boot with JWT authentication, post management, comment management, and scheduled email functionality.
 
-Overview
+🚀 Features 
 
-This application provides:
+👤 User
 
-User Registration & Login (JWT secured)
+    Register user
 
-Create and retrieve Posts
+    Login (JWT secured)
 
-Add Comments to Posts
+    Welcome email (scheduled)
 
-Change Comment visibility
+📝 Posts
 
-Retrieve comments written by a specific user
+    Create post
 
-Scheduled Welcome Email after registration
+    Get all posts (with comments)
 
-Centralized Global Exception Handling
+    Get single post
 
-Tech Stack
+💬 Comments
 
-Java 17+
+    Add comment to post
 
-Spring Boot
+    Change comment visibility
 
-Spring Security (JWT)
+    Get comments by user
 
-Spring Data JPA
+🛠 Tech Stack
 
-Hibernate
+    Java 17+
 
-MySQL (or compatible database)
+    Spring Boot
 
-Lombok
+    Spring Security (JWT)
 
-Thymeleaf (Email Templates)
+    Spring Data JPA
+
+    Hibernate
+
+    MySQL
+
+    Lombok
+
+    Thymeleaf (Email templates)
