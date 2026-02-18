@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: blog_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: blogdb
+      MYSQL_USER: rootuser
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-prootpass" ]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  application:
+    build: .
+    container_name: blog_app
+    restart: always
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_APP_NAME: blog-spring
+
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/blogdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_DATASOURCE_DIALECT: org.hibernate.dialect.MySQLDialect
+
+      MAIL_HOST: smtp.gmail.com
+      MAIL_USERNAME: ashannaveen13@gmail.com
+      MAIL_PASSWORD: fmsaerepvunmljvu
+      MAIL_PORT: 587
+      MAIL_SMTP_AUTH: true
+      MAIL_SMTP_STARTTLS_ENABLE: true
+
+volumes:
+  mysql_data:

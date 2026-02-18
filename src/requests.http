@@ -10,22 +10,22 @@ Content-Type: application/json
 ###
 POST http://localhost:8080/api/users/register
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcwNzk4NDY1LCJleHAiOjE3NzA4MjcyNjV9.A6laptYpy1tciPCPv_kKtQMtgNin_n0AJYfM8O1HOC8
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcxNDI2ODY5LCJleHAiOjE3NzE0NTU2Njl9.M8Sr7KMlLbq-vATH3VBSCAr1KeHxN6sXcHu0ECgvjQs
 
 {
-  "name": "Naveen12",
-  "email": "naveen11@gmail.com",
-  "password": "Naveen@123"
+  "name": "Joshua",
+  "email": "ashanjoseph13@gmail.com",
+  "password": "Josh@123"
 }
 
 ###
 POST http://localhost:8080/api/users/login
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcwMjY5NTUzLCJleHAiOjE3NzAyOTgzNTN9.LWvdv_zBRWDEOSaYMtkfI94r2jGVVGIN7n4y9X_xH0c
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcxNDI2ODY5LCJleHAiOjE3NzE0NTU2Njl9.M8Sr7KMlLbq-vATH3VBSCAr1KeHxN6sXcHu0ECgvjQs
 
 {
-  "email": "joe@gmail.com",
-  "password": "Joseph@123"
+  "email": "ashanjoseph13@gmail.com",
+  "password": "Josh@123"
 }
 
 ###
