@@ -73,3 +73,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb
 GET http://localhost:8080/api/comments/user/1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcwNzMyOTc1LCJleHAiOjE3NzA3NjE3NzV9.-B5_iM4FarYZO6hEDdL7NkrXixxXbN4YGZWWGVZEgQ0
+
+###
+GET http://localhost:8080/api/external
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiU3ByaW5nLUJsb2ctQXBwIiwiaWF0IjoxNzcxOTQzNTE1LCJleHAiOjE3NzE5NzIzMTV9.1fbmpI8oovFF0-ZniEWX7Ggha3O0GU8yA8OuQ7NZVis
